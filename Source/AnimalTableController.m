@@ -28,8 +28,10 @@
 #import <AsyncDisplayKit/AsyncDisplayKit.h>
 
 @interface AnimalTableController ()
+
 @property (strong, nonatomic) ASTableNode *tableNode;
 @property (strong, nonatomic) NSMutableArray<RainforestCardInfo *> *animals;
+
 @end
 
 @interface AnimalTableController (DataSource)<ASTableDataSource>
@@ -39,8 +41,10 @@
 @end
 
 @interface AnimalTableController (Helpers)
+
 - (void)retrieveNextPageWithCompletion:(void (^)(NSArray *))block;
 - (void)insertNewRowsInTableNode:(NSArray *)newAnimals;
+
 @end
 
 @implementation AnimalTableController
